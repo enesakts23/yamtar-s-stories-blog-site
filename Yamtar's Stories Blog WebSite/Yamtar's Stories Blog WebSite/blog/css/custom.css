@@ -1,0 +1,24 @@
+.flickity-page-dots {
+	display: none;
+}
+
+.padding-zero {
+	padding: 0 !important;
+}
+
+#menu1 {
+	padding: 25px 0;
+}
+
+.blog-h3 {
+	margin-bottom: 0;font-weight: 700;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+ }
+
+ .flickity-viewport {
+ 	height: 500px !important;
+ }

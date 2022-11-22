@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Yamtar's Stories</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Site Description Here">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/flickity.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/jquery.steps.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body class=" ">
+        <a id="start"></a>
+        <!--end of notification-->
+        <div class="nav-container ">
+            <div class="bar bar--sm visible-xs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3 col-md-2">
+                            <a href="index.html">
+                                <!-- <img class="logo logo-dark" alt="logo" src="img/logo-dark.png" />
+                                <img class="logo logo-light" alt="logo" src="img/logo-light.png" /> -->
+                                <h3 class="blog-h3">Blog</h3>
+                            </a>
+                        </div>
+                        <div class="col-9 col-md-10 text-right">
+                            <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs">
+                                <i class="icon icon--sm stack-interface stack-menu"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </div>
+            <!--end bar-->
+            <nav id="menu1" class="bar bar--sm bar-1 hidden-xs ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-1 col-md-2 hidden-xs">
+                            <div class="bar__module">
+                                <a href="index.html">
+                                    <!-- <img class="logo logo-dark" alt="logo" src="img/logo-dark.png" />
+                                    <img class="logo logo-light" alt="logo" src="img/logo-light.png" /> -->
+                                    <h3 class="blog-h3">Blog</h3>
+                                </a>
+                            </div>
+                            <!--end module-->
+                        </div>
+                        <div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
+                            <div class="bar__module">
+                                <ul class="menu-horizontal text-left">
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="about.html">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a href="login.html">Sign In</a>
+                                    </li>
+                                    <li>
+                                        <a href="signup.html">Sign Up</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </nav>
+            <!--end bar-->
+        </div>
+        <div class="main-container">
+            <section class="space--sm bg--secondary inner-sec">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 ">
+                            <h1>Sign Up</h1>
+                        </div>
+                        <div class="col-md-4">
+                            <ol class="breadcrumbs">
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="signup.html">Sign Up</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="boxed boxed--lg boxed--border">
+                                <form  class="row mx-0 " action="#" method="post" enctype="multipart/form-data">
+                                    <div class="col-md-6">
+                                        <span>First Name</span>
+                                        <input type="text" id="first" name="first" required="required" oninput="updatePreview()">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <span>Last Name</span>
+                                        <input type="text" id="last" name="last" required="required" oninput="updatePreview()">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <span>Username</span>
+                                        <input type="text" id="user" name="user" required="required" oninput="userRequirements(this); updatePreview()">
+                                        <p>Username must be <span id="ulen" style="">between 4-20 characters</span> and <span id="uchars">cannot contain special characters</span></p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <span>Email</span>
+                                        <input type="text" name="email" required="required" oninput="validEmail(this)">
+                                        <p id="emailp" style="display:none">Enter a valid email</p>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <span>Password</span>
+                                        <input type="password" name="pass" id="pass" required="required" oninput="passwordRequirements(this)">
+                                        <div class="input-checkbox">
+                                            <input type="checkbox" name="showPass" id="showPass" >
+                                            <label for="showPass" onclick="showPassword()"></label>
+                                        </div>
+                                        <span>Show Password</span>
+                                        <p>Password must be <span id="len" style="">between 6-20 characters</span> and <span id="chars">include an uppercase letter, lowercase letter, and special character</span></p>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <span>Confirm Password</span>
+                                        <input type="password" name="conpass" id="conpass" required="required" oninput="passwordRequirements(document.getElementById('pass'))">
+                                        <p id="confirmp" style="display:none">Passwords must match</p>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <span>Image Link</span>
+                                        <input type="text" name="img" oninput="changeAction(this);">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="g-recaptcha" data-sitekey="6Led0ncaAAAAANY7GzneClTWt2aCVoOUvXOsAraO"></div>
+                                    </div>
+                                    <div class="col-md-12 boxed">
+                                        <div class="input-checkbox">
+                                            <input type="checkbox" name="rem" id="rem">
+                                            <label for="rem"></label>
+                                        </div>
+                                        <span>Remember Me</span>
+                                        <button type="submit" id="submit" class="btn btn--primary type--uppercase">Sign Up</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="boxed boxed--lg boxed--border">
+                                <div class="text-block text-center">
+                                    <img alt="avatar" id="preview" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" class="image--md" style="max-height: 15.428571em;" />
+                                    <h3 id="name">Your Name</h3>
+                                    <span class="h5" id="username"></span>
+                                    <span class="type--fine-print block"> 
+                                        Already have an account?
+                                        <a href="signin.php"> Sign In</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+            <footer class="text-center-xs space--xs bg--dark ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="about.html">
+                                        <span class="h6 type--uppercase">About</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">
+                                        <span class="h6 type--uppercase">Contact</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-5 text-right text-center-xs">
+                            <ul class="social-list list-inline list--hover">
+                                <li>
+                                    <a href="#">
+                                        <i class="socicon socicon-twitter icon icon--xs"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="socicon socicon-facebook icon icon--xs"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="socicon socicon-instagram icon icon--xs"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                    <div class="row">
+                        <div class="col-md-7">
+                            <span class="type--fine-print">&copy;
+                                <span class="update-year"></span> Blog Website</span>
+                        </div>
+                        <div class="col-md-5 text-right text-center-xs">
+                            <a class="type--fine-print" href="#">yamtarstories@info.com</a>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </footer>
+        </div>
+        <!--<div class="loader"></div>-->
+        <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
+            <i class="stack-interface stack-up-open-big"></i>
+        </a>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/flickity.min.js"></script>
+        <script src="js/easypiechart.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/typed.min.js"></script>
+        <script src="js/datepicker.js"></script>
+        <script src="js/isotope.min.js"></script>
+        <script src="js/ytplayer.min.js"></script>
+        <script src="js/lightbox.min.js"></script>
+        <script src="js/granim.min.js"></script>
+        <script src="js/jquery.steps.min.js"></script>
+        <script src="js/countdown.min.js"></script>
+        <script src="js/twitterfetcher.min.js"></script>
+        <script src="js/spectragram.min.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script type="text/javascript">
+            showPassword = function(){
+                var x = document.getElementById("pass");
+                if (x.type === "password") {
+                    x.type = "text";
+                } 
+                else {
+                   x.type = "password";
+                }
+            }
+            changeAction = function(link){
+               if(link.value == ""){
+                  document.getElementById("preview").src = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png";
+               }else{
+                   document.getElementById("preview").src = link.value;
+               }
+            }
+
+            let specialChars = ["+", "-", "&", "|", "!", "(", ")", "#", "{", "}", "[", "]", "^", "~", "*", "?", ":", "@", "$", "%", "_", "=", "/", "\\", "?", "\'"];
+            let upperChars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+            let lowerChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "y", "v", "w", "x", "y", "z"];
+            var passwordMet = false;
+            var userMet = false;
+
+            updatePreview = function(){
+                if(document.getElementById("first").value != "" || document.getElementById("last").value != ""){
+                    let name = document.getElementById("first").value + " " + document.getElementById("last").value;
+                    document.getElementById("name").innerHTML = name;
+                }
+                if(document.getElementById("user").value != ""){
+                    let user = "@" + document.getElementById("user").value;
+                    document.getElementById("username").innerHTML = user;
+                }
+            }
+
+            passwordRequirements = function(select){
+                var pw = select.value;
+                if (!(specialChars.some(v => pw.includes(v)) && lowerChars.some(v => pw.includes(v)) && upperChars.some(v => pw.includes(v)))){
+                    document.getElementById("chars").style = "color:red";
+                }else{
+                    document.getElementById("chars").style = "color:green";
+                }
+                if (pw.length < 6 || pw.length > 20){
+                    document.getElementById("len").style = "color:red";
+                }else{
+                    document.getElementById("len").style = "color:green";
+                }
+                if(pw == document.getElementById("conpass").value){
+                    document.getElementById("confirmp").style = "display:none";
+                }else{
+                    document.getElementById("confirmp").style = "color:red";
+                }
+                if(specialChars.some(v => pw.includes(v)) && lowerChars.some(v => pw.includes(v)) 
+                    && upperChars.some(v => pw.includes(v)) && !(pw.length < 6 || pw.length >= 20)
+                    && pw == document.getElementById("conpass").value){
+                    passwordMet = true;
+                    }
+                    else{ 
+                        passwordMet = false;
+                    }
+                if(passwordMet && userMet){
+                    document.getElementById("submit").style = "background-color:#a3d2ca;";
+                    document.getElementById("submit").disabled = false;
+                }else{
+                    document.getElementById("submit").style = "background-color:#d1e8e4;";
+                    document.getElementById("submit").disabled = true;
+                }
+            }
+
+            userRequirements = function(select){
+                var user = select.value;
+                if (specialChars.some(v => user.includes(v))){
+                    document.getElementById("uchars").style = "color:red";
+                }else{
+                    document.getElementById("uchars").style = "color:green";
+                }
+                if (user.length < 4 || user.length > 20){
+                    document.getElementById("ulen").style = "color:red";
+                }else{
+                    document.getElementById("ulen").style = "color:green";
+                }
+                
+                if(!(specialChars.some(v => user.includes(v))) && !(user.length < 4 || user.length > 20)){
+                    userMet = true;
+                    }
+                    else{
+                        userMet = false;
+                    }
+                if(passwordMet && userMet){
+                    document.getElementById("submit").style = "background-color:#a3d2ca;";
+                    document.getElementById("submit").disabled = false;
+                }else{
+                    document.getElementById("submit").style = "background-color:#d1e8e4;";
+                    document.getElementById("submit").disabled = true;
+                }
+            }
+
+            function validateEmail(email) {
+                const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(String(email).toLowerCase());
+            }
+
+            validEmail = function(select){
+                var email = select.value;
+                if(!validateEmail(email)){
+                    document.getElementById("emailp").style = "color:red";
+                }else{
+                    document.getElementById("emailp").style = "display:none";
+                }
+            }
+        </script>
+    </body>
+</html>
